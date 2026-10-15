@@ -147,3 +147,17 @@ cat("\nHay", length(SoloMammals), "animales que están en mammals y no en Animal
 Vemos que los animales no comunes son animales que presentan algún error caligráfico, como Arctic fox/Artic fox, Arctic ground squirrel/Artic ground squirrel, Patas monkey/Potar monkey, Mole rat/Mole.
 
 Por otro lado, tenemos también los dinosaurios que están en Animals2 y no en mammals, como Dipliodocus, Triceratops y Brachiosaurus.
+
+### Apartado f) Determina las diferencias entre los animales que no aparecen en ambos conjuntos.
+
+Para ello, vamosa calcular los animales que no están en ambos conjuntos a la vez usando las funciones setdiff, intersect y union.
+
+```{r}
+# Calculamos las diferencias
+cat("Las diferencias entre los conjuntos son: \n")
+Diferencias <- setdiff(union(rownames(mammals), rownames(Animals2)), intersect(rownames(mammals), rownames(Animals2)))
+
+# Número de diferencias
+cat("\nEl número de diferencias es", length(Diferencias))
+```
+
