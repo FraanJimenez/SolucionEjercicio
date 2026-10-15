@@ -98,3 +98,26 @@ str(mammals)
 str(Animals2)
 ```
 
+### Apartado c) Muestra los nombres de las filas y las columnas (rownames, colnames)
+
+Para ello, usamos las funciones dadas en el enunciado sobre nuestros conjuntos.
+
+```{r}
+# Conjunto mammals
+cat("Nombres de filas de mammals \n")
+rownames(mammals)
+
+cat("\n Nombres de columnas de mammals \n")
+colnames(mammals)
+
+
+# Conjunto Animals2
+cat("\n Nombres de filas de Animals2 \n")
+rownames(Animals2)
+
+cat("\n Nombres de columnas de Animals2 \n")
+colnames(Animals2)
+```
+
+### Apartado d) Usa la función intersect y almacena en la variable commonAnimals los aminales que aparezcan en ambos conjuntos.
+
