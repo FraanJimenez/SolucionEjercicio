@@ -105,15 +105,15 @@ Para ello, usamos las funciones dadas en el enunciado sobre nuestros conjuntos.
 cat("Nombres de filas de mammals \n")
 rownames(mammals)
 
-cat("\n Nombres de columnas de mammals \n")
+cat("\nNombres de columnas de mammals \n")
 colnames(mammals)
 
 
 # Conjunto Animals2
-cat("\n Nombres de filas de Animals2 \n")
+cat("\nNombres de filas de Animals2 \n")
 rownames(Animals2)
 
-cat("\n Nombres de columnas de Animals2 \n")
+cat("\nNombres de columnas de Animals2 \n")
 colnames(Animals2)
 ```
 
@@ -128,4 +128,22 @@ commonAnimals
 
 ### Apartado e) Usa setdiff para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son? ¿Qué tipo de animales son?
 
-Calculamos las diferencias en ambos sentidos y los contamos 
+Calculamos las diferencias en ambos sentidos y los contamos (length) y vemos de qúe tipo de animales se trata.
+
+```{r}
+# Calculamos los que están solo en uno de los dos
+cat("Los animales que están en mammals y no en Animals2 son: \n")
+SoloMammals <- setdiff(rownames(mammals), rownames(Animals2))
+SoloMammals
+
+cat("\nLos animales que están en Animals2 y no en mammals son: \n")
+SoloAnimals2 <- setdiff(rownames(Animals2), rownames(mammals))
+SoloAnimals2
+
+# Calculamos cuántos son
+cat("\nHay", length(SoloMammals), "animales que están en mammals y no en Animals2, y hay", length(SoloAnimals2), "animales que están en Animals2 y no en mammals.")
+```
+
+Vemos que los animales no comunes son animales que presentan algún error caligráfico, como Arctic fox/Artic fox, Arctic ground squirrel/Artic ground squirrel, Patas monkey/Potar monkey, Mole rat/Mole.
+
+Por otro lado, tenemos también los dinosaurios que están en Animals2 y no en mammals, como Dipliodocus, Triceratops y Brachiosaurus.
