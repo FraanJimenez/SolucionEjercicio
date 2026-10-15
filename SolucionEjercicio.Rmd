@@ -51,7 +51,7 @@ language:
     solution: 'Solución. '
 ---
 
-## Ejercicio 1: Considera los conjuntos de datos mammals del paquete MASS y Animals2 del paquete robustbase.
+# Ejercicio 1: Considera los conjuntos de datos mammals del paquete MASS y Animals2 del paquete robustbase.
 
 Para ello, importamos ambas librerías (previamente instaladas) y visualizmos los conjuntos pedidos.
 
@@ -63,7 +63,6 @@ data("mammals", package = "MASS")
 data("Animals2", package = "robustbase")
 ```
 
-
 ### Apartado a) Mira la las características de ambos conjuntos usando la ayuda.
 
 Consultamos la documentación de los conjuntos de datos mammals y Animals2 para conocer su contenido, su procedencia y las variables que contienen.
@@ -73,7 +72,6 @@ Consultamos la documentación de los conjuntos de datos mammals y Animals2 para 
 ?mammals
 ?Animals2
 ```
-
 
 ### Apartado b) Usa las funciones dim, head, tail, str para una primera visión de los conjuntos de datos.
 
@@ -121,3 +119,13 @@ colnames(Animals2)
 
 ### Apartado d) Usa la función intersect y almacena en la variable commonAnimals los aminales que aparezcan en ambos conjuntos.
 
+Definimos la variable pedida usando la función intersect y los nombres de las filas de ambos conjuntos para ver su coincidencia.
+
+```{r}
+commonAnimals <- intersect(rownames(mammals), rownames(Animals2))
+commonAnimals
+```
+
+### Apartado e) Usa setdiff para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son? ¿Qué tipo de animales son?
+
+Calculamos las diferencias en ambos sentidos y los contamos 
