@@ -74,3 +74,27 @@ Consultamos la documentación de los conjuntos de datos mammals y Animals2 para 
 ?Animals2
 ```
 
+
+### Apartado b) Usa las funciones dim, head, tail, str para una primera visión de los conjuntos de datos.
+
+Utilizamos las funciones dim, head, tail y str para conocer las dimensiones de ambos conjuntos de datos, visualizar sus primeras y últimas filas y examinar su estructura.
+
+```{r}
+
+# Dimensiones de los conjuntos
+dim(mammals)
+dim(Animals2)
+
+# Primeras seis filas
+head(mammals)
+head(Animals2)
+
+# Últimas seis filas
+tail(mammals)
+tail(Animals2)
+
+# Estructura de los conjuntos
+str(mammals)
+str(Animals2)
+```
+
